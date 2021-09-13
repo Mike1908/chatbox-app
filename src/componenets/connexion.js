@@ -25,6 +25,7 @@ class Connexion extends Component {
         }
         return (
             <div className='connexionBox'>
+                <div className="Titre-app" >CHATBOX</div>
                 <form className='connexion' onSubmit={this.handleSubmit}>
                     <input 
                     value={this.state.pseudo}
