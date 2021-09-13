@@ -27,7 +27,7 @@ class App extends Component {
    * dans le state les messages
    */
   componentDidMount (){
-    base.syncState('/',{
+    base.syncState('/chatbox-app/',{
       context: this,
       state: 'messages'
     })

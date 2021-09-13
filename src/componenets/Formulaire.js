@@ -49,7 +49,7 @@ class Formulaire extends Component {
 
     render() {
         if (!this.state.connect) {
-            return <Redirect push to='/'/>;
+            return <Redirect push to='/chatbox-app/'/>;
         } else {
             return (
                 <div>
