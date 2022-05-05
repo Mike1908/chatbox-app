@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {Redirect} from 'react-router-dom' //envoi des info entre les pages par le lien
+import {Redirect} from 'react-router-dom';
 
-class Connexion extends Component {
+class Login extends Component {
     state = {
         pseudo: '',
         goToChat: false
@@ -24,9 +24,9 @@ class Connexion extends Component {
             return <Redirect push to={texte }/>
         }
         return (
-            <div className='connexionBox'>
-                <div className="Titre-app" >CHATBOX</div>
-                <form className='connexion' onSubmit={this.handleSubmit}>
+            <div className='loginBox'>
+                <div className="Title-app" >CHATBOX</div>
+                <form className='login' onSubmit={this.handleSubmit}>
                     <input 
                     value={this.state.pseudo}
                     onChange={this.handleChange}
@@ -40,11 +40,4 @@ class Connexion extends Component {
         );
     }
 }
-
-export default Connexion;
-/**
- * le principe est de se servire du lient au dessus pour passe de information au reste des page (compenente)
- *  import {Redirect} from 'react-router-dom'  aide a le faire  <Redirect to={texte }/> la fontion utilise
- *  import {BrowserRouter, Route, Switch} from 'react-router-dom'  permet de capture le super lient 
- *  <Route exact path='/' component = {Connexion}></Route>  permet d affichier le du 
- */
+export default Login;

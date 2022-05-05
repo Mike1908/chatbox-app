@@ -17,5 +17,4 @@ const Message = ({pseudo, message, isUser}) => {
     }
    
 }
-
-export default Message
+export default Message;

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import Notfound from './componenets/Notfound'
-import  Connexion from './componenets/connexion'
+import  Login from './componenets/Login'
 import * as serviceWorker from './serviceWorker'
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
@@ -11,7 +11,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 const Root = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path='/chatbox-app/' component = {Connexion}></Route>
+            <Route exact path='/chatbox-app/' component = {Login}></Route>
             <Route exact path='/chatbox-app/pseudo/:pseudo' component = {App}></Route>
             <Route component = {Notfound}></Route>
         </Switch>

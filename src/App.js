@@ -1,15 +1,15 @@
-import React, { Component, createRef } from 'react'
+import React, { Component, createRef } from 'react';
 
-import './App.css'
-import './animationas.css' // css speciale pour l annimation 
+import './App.css';
+import './style/animation.css'; // css speciale pour l annimation 
 
-import Formulaire from './componenets/Formulaire'
-import Message from './componenets/Message'
+import Form from './componenets/Form';
+import Message from './componenets/Message';
 
 // Firebase
-import base from './base'
+import base from './base';
 //Animations
-import {CSSTransition, TransitionGroup} from 'react-transition-group'
+import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
 class App extends Component {
 
@@ -43,8 +43,8 @@ class App extends Component {
   //sera passe en paramaitre pour arrive dans Formulaire
   addMessage = message =>{
     const messages = {...this.state.messages}
-    const clekU = 'message'+Date.now()
-    messages[clekU] = message
+    const keykU = 'message'+Date.now()
+    messages[keykU] = message
     
     //suprimet le 1er message quand en a 10 msg
     /**
@@ -92,7 +92,7 @@ class App extends Component {
           </div>
         </div>
         
-        <Formulaire
+        <Form
         length={140}
         pseudo={this.state.pseudo}
         addMessage={this.addMessage}/>
@@ -100,5 +100,4 @@ class App extends Component {
     )
   }
 }
-
 export default App

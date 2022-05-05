@@ -1,7 +1,7 @@
-import React, { Component } from '../../node_modules/react';
+import React, { Component } from 'react';
 import {Redirect} from 'react-router-dom';
 
-class Formulaire extends Component {
+class Form extends Component {
 
     state = {
         message:'',
@@ -43,7 +43,7 @@ class Formulaire extends Component {
         this.createMessage()
     }
 
-    deconnection = () =>{
+    logout = () =>{
         this.setState({connect:false});
     }
 
@@ -68,7 +68,7 @@ class Formulaire extends Component {
                             Envoyer!
                         </button>
                     </form>
-                    <button type='submit' onClick={this.deconnection}>
+                    <button type='submit' onClick={this.logout}>
                         Deconnecter
                     </button>
                 </div>
@@ -77,4 +77,4 @@ class Formulaire extends Component {
     }
 }
 
-export default Formulaire
+export default Form;
